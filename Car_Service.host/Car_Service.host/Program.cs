@@ -13,6 +13,11 @@ namespace Car_Service.host
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Car Service 2", Version = "v1" });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -20,6 +25,14 @@ namespace Car_Service.host
             {
                 app.MapOpenApi();
             }
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("v1/swagger.json", "CarService");
+            });
+
+            app.UseSwagger();
+
 
             app.UseHttpsRedirection();
 
