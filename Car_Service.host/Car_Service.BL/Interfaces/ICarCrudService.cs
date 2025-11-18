@@ -12,5 +12,7 @@ namespace Car_Service.BL.Interface
         void DeleteCar(int id);
 
         List<Car> GetAllCars();
+
+
     }
 }

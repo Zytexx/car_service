@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Car_Service.BL.Services
 {
-    internal class CarService:ICarService
+    internal class CarCrudService:ICarService
     {
         private readonly ICarRepository _carRepository;
 
-        public CarService(ICarRepository carRepository)
+        public CarCrudService(ICarRepository carRepository)
         {
             _carRepository = carRepository;
         }
@@ -27,6 +27,9 @@ namespace Car_Service.BL.Services
         List<Car> GetAllCars()
         {
             return _carRepository.GetAllCars();
+        }
+        public Car_Service? GetId(int id) { 
+        return _carRepository.GetById(id);
         }
     }
 }
