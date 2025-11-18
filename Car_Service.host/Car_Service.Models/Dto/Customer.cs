@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Car_Service.Models.Dto
 {
-    public class Car
+    public class Customer
     {
-        public int Id { get; set; }
-        public int Year { get; set; }
-        public string Model { get; set; } = string.Empty;
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
     }
 }
