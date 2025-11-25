@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PIZRzXhban0=",
+  "dgSpecHash": "JLU+TDW55bU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\battl\\Downloads\\CarService-main\\CarService.Host\\CarService.BL\\CarService.BL.csproj",
+  "projectFilePath": "T:\\car_service\\CarService.Host\\CarService.BL\\CarService.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\battl\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.11\\microsoft.extensions.dependencyinjection.9.0.11.nupkg.sha512",
     "C:\\Users\\battl\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.11\\microsoft.extensions.dependencyinjection.abstractions.9.0.11.nupkg.sha512"

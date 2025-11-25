@@ -113,11 +113,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\battl\\Downloads\\CarService-main\\CarService.Host\\CarService.Models\\CarService.Models.csproj",
+      "projectUniqueName": "T:\\car_service\\CarService.Host\\CarService.Models\\CarService.Models.csproj",
       "projectName": "CarService.Models",
-      "projectPath": "C:\\Users\\battl\\Downloads\\CarService-main\\CarService.Host\\CarService.Models\\CarService.Models.csproj",
+      "projectPath": "T:\\car_service\\CarService.Host\\CarService.Models\\CarService.Models.csproj",
       "packagesPath": "C:\\Users\\battl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\battl\\Downloads\\CarService-main\\CarService.Host\\CarService.Models\\obj\\",
+      "outputPath": "T:\\car_service\\CarService.Host\\CarService.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

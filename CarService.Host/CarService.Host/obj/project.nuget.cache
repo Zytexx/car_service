@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q1rQSm/OTBE=",
+  "dgSpecHash": "qbZr8m5suho=",
   "success": true,
-  "projectFilePath": "C:\\Users\\battl\\Downloads\\CarService-main\\CarService.Host\\CarService.Host\\CarService.Host.csproj",
+  "projectFilePath": "T:\\car_service\\CarService.Host\\CarService.Host\\CarService.Host.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\battl\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "C:\\Users\\battl\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
