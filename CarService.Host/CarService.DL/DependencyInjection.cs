@@ -11,6 +11,7 @@ namespace CarService.DL
         {
             // Register data layer services here
             services.AddSingleton<ICarRepository, CarLocalRepository>();
+            services.AddSingleton<ICustomerRepository, CustomerLocalRepository>();
 
             return services;
         }
