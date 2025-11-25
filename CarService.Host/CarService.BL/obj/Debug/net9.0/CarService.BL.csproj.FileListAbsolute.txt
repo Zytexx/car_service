@@ -1,0 +1,17 @@
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.BL.deps.json
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.BL.dll
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.BL.pdb
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.DL.dll
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.Models.dll
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.DL.pdb
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\bin\Debug\net9.0\CarService.Models.pdb
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.csproj.AssemblyReference.cache
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.AssemblyInfoInputs.cache
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.AssemblyInfo.cs
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.csproj.CoreCompileInputs.cache
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarServi.90FAE114.Up2Date
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.dll
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\refint\CarService.BL.dll
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\CarService.BL.pdb
+C:\Users\battl\Downloads\CarService-main\CarService.Host\CarService.BL\obj\Debug\net9.0\ref\CarService.BL.dll
