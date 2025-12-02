@@ -20,6 +20,7 @@ namespace CarService.Host.Controllers
             ILogger<CarsController> logger)
         {
             _carCrudService = carCrudService;
+            _mapper = mapper;
         }
 
         [HttpDelete]
