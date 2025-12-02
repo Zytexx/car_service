@@ -100,3 +100,9 @@ T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\Serilog.Settings
 T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\Serilog.Sinks.File.dll
+T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\DnsClient.dll
+T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\MongoDB.Bson.dll
+T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\MongoDB.Driver.dll
+T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\SharpCompress.dll
+T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\Snappier.dll
+T:\car_service\CarService.Host\CarService.Host\bin\Debug\net9.0\ZstdSharp.dll
