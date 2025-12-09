@@ -4,16 +4,7 @@ using CarService.BL.Interfaces;
 using CarService.DL;
 using CarService.DL.Interfaces;
 using CarService.DL.Repositories;
-<<<<<<< Updated upstream
-=======
 using CarService.Host.Healthchecks;
-using CarService.Host.Validators;
-using CarService.Models.Requests;
-using FluentValidation;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 using Mapster;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -56,7 +47,15 @@ namespace CarService.Host
 
             builder.Host.UseSerilog();
 
+            builder.Services
+                .AddHealthChecks()
+                .AddCheck<MyCustomHealthCheck>("sample");
+
+
             var app = builder.Build();
+
+            app.MapHealthChecks("/healthz");
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
