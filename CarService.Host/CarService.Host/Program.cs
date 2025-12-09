@@ -4,6 +4,13 @@ using CarService.BL.Interfaces;
 using CarService.DL;
 using CarService.DL.Interfaces;
 using CarService.DL.Repositories;
+<<<<<<< Updated upstream
+=======
+using CarService.Host.Healthchecks;
+using CarService.Host.Validators;
+using CarService.Models.Requests;
+using FluentValidation;
+>>>>>>> Stashed changes
 using Mapster;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -31,7 +38,10 @@ namespace CarService.Host
                 .AddBusinessLayer();
 
             builder.Services.AddMapster();
-           
+
+            builder.Services.AddValidatorsFromAssemblyContaining<AddCarRequestValidator>();
+
+
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
