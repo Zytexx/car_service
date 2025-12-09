@@ -32,7 +32,10 @@ namespace CarService.Host
                 .AddBusinessLayer();
 
             builder.Services.AddMapster();
-           
+
+            builder.Services.AddValidatorsFromAssemblyContaining<AddCarRequestValidator>();
+
+
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
