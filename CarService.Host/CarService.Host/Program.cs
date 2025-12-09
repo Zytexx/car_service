@@ -5,6 +5,8 @@ using CarService.DL;
 using CarService.DL.Interfaces;
 using CarService.DL.Repositories;
 using CarService.Host.Healthchecks;
+using CarService.Host.Validators;
+using FluentValidation;
 using Mapster;
 using Microsoft.OpenApi.Models;
 using Serilog;
