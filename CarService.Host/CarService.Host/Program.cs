@@ -10,6 +10,9 @@ using CarService.Host.Healthchecks;
 using CarService.Host.Validators;
 using CarService.Models.Requests;
 using FluentValidation;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 using Mapster;
 using Microsoft.OpenApi.Models;
