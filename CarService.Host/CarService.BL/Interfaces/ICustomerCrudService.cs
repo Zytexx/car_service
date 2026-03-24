@@ -1,20 +1,12 @@
 ﻿using CarService.Models.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CarService.BL.Interfaces
+namespace CarService3.BL.Interfaces
 {
     public interface ICustomerCrudService
     {
-        void AddCustomer(Customer customer);
-
-        void DeleteCustomer(Guid id);
-
-        List<Customer> GetAllCustomers();
-
-        Customer? GetById(Guid id);
+        Task Add(Customer? customer);
+        Task<List<Customer>> GetAll();
+        Task<Customer?> GetById(Guid id);
+        Task Delete(Guid id);
     }
 }
