@@ -1,15 +1,18 @@
-﻿using CarService.Models.Dto;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using CarService.Models.Dto;
 
 namespace CarService.DL.Interfaces
 {
     public interface ICarRepository
     {
-        void AddCar(Car car);
+        Task AddCarAsync(Car car);
 
-        void DeleteCar(Guid? id);
+        Task DeleteCarAsync(Guid? id);
 
-        List<Car> GetAllCars();
+        Task<List<Car>> GetAllCarsAsync();
 
-        Car? GetById(Guid? id);
+        Task<Car?> GetByIdAsync(Guid? id);
     }
 }

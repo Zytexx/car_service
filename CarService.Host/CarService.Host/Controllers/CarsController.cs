@@ -6,6 +6,7 @@ using FluentValidation.Results;
 using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks; 
 
 namespace CarService.Host.Controllers
 {
@@ -28,30 +29,32 @@ namespace CarService.Host.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteCar(Guid id)
+        public async Task<IActionResult> DeleteCar(Guid id)
         {
             if (id == Guid.Empty)
             {
                 return BadRequest("ID must be a valid Guid.");
             }
-            var car = _carCrudService.GetById(id);
+
+            var car = await _carCrudService.GetByIdAsync(id);
             if (car == null)
             {
                 return NotFound($"Car with ID {id} not found.");
             }
-            _carCrudService.DeleteCar(id);
+
+            await _carCrudService.DeleteCarAsync(id);
             return Ok();
         }
 
         [HttpGet(nameof(GetById))]
-        public IActionResult GetById(Guid id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             if (id == Guid.Empty)
             {
                 return BadRequest("ID must be a valid Guid.");
             }
 
-            var car = _carCrudService.GetById(id);
+            var car = await _carCrudService.GetByIdAsync(id);
 
             if (car == null)
             {
@@ -62,14 +65,15 @@ namespace CarService.Host.Controllers
         }
 
         [HttpGet(nameof(GetAll))]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var cars = _carCrudService.GetAllCars();
+
+            var cars = await _carCrudService.GetAllCarsAsync();
             return Ok(cars);
         }
 
         [HttpPost]
-        public IActionResult AddCar([FromBody] AddCarRequest? carRequest)
+        public async Task<IActionResult> AddCar([FromBody] AddCarRequest? carRequest)
         {
             if (carRequest == null)
             {
@@ -85,7 +89,7 @@ namespace CarService.Host.Controllers
 
             var car = _mapper.Map<Car>(carRequest);
 
-            _carCrudService.AddCar(car);
+            await _carCrudService.AddCarAsync(car);
 
             return Ok();
         }

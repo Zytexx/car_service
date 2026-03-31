@@ -1,32 +1,37 @@
-﻿using CarService.DL.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CarService.DL.Interfaces;
 using CarService.DL.LocalDb;
 using CarService.Models.Dto;
 
 namespace CarService.DL.Repositories
 {
-    [Obsolete ($"Please use: {nameof(CarMongoRepository)}")]
+    [Obsolete($"Please use: {nameof(CarMongoRepository)}")]
     internal class CarLocalRepository : ICarRepository
     {
-        public void AddCar(Car car)
+        public Task AddCarAsync(Car car)
         {
             StaticDb.Cars.Add(car);
+            return Task.CompletedTask;
         }
 
-        public void DeleteCar(Guid? id)
+        public Task DeleteCarAsync(Guid? id)
         {
             StaticDb.Cars.RemoveAll(c => c.Id == id);
+            return Task.CompletedTask;
         }
 
-        public List<Car> GetAllCars()
+        public Task<List<Car>> GetAllCarsAsync()
         {
-            return StaticDb.Cars;
+            return Task.FromResult(StaticDb.Cars);
         }
 
-        public Car? GetById(Guid? id)
+        public Task<Car?> GetByIdAsync(Guid? id)
         {
-            return StaticDb.Cars
-                .FirstOrDefault(c =>
-                    c.Id == id);
+            var car = StaticDb.Cars.FirstOrDefault(c => c.Id == id);
+            return Task.FromResult(car);
         }
     }
 }

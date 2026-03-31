@@ -1,10 +1,13 @@
-﻿using CarService.BL.Interfaces;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks; 
+using CarService.BL.Interfaces;
 using CarService.BL.Services;
 using CarService.DL.Interfaces;
 using CarService.Models.Dto;
 using CarService.Tests.MockData;
 using Moq;
-
+using Xunit;
 
 namespace CarService.Tests.CarTests
 {
@@ -15,13 +18,11 @@ namespace CarService.Tests.CarTests
         public CarCrudServiceTests()
         {
             _carRepositoryMock = new Mock<ICarRepository>();
-
         }
 
         [Fact]
-        public void AddCarTest_Ok()
+        public async Task AddCarTest_Ok() 
         {
-            //setup
             var expectedCarCount = CarMockedData.Cars.Count + 1;
             var id = Guid.NewGuid();
             var car = new Car()
@@ -31,25 +32,20 @@ namespace CarService.Tests.CarTests
                 Year = 2020
             };
 
-        
-
             _carRepositoryMock
-               .Setup(repo => repo.AddCar(car))
+               .Setup(repo => repo.AddCarAsync(car)) 
                .Callback(() =>
                {
                    CarMockedData.Cars.Add(car);
-               });
-
-            //inject
+               })
+               .Returns(Task.CompletedTask); 
 
             var service = new CarCrudService(_carRepositoryMock.Object);
 
-            //act
+            await service.AddCarAsync(car); 
 
-            service.AddCar(car);
             var resultCar = CarMockedData.Cars.FirstOrDefault(c => c.Id == id);
 
-            //assert
             Assert.NotNull(resultCar);
             Assert.Contains(car, CarMockedData.Cars);
             Assert.Equal(expectedCarCount, CarMockedData.Cars.Count);
